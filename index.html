@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITCLUB FOUNDATION | Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;500;600;700;900&display=swap');
+        
+        /* Brand Identity Colors Matching the Official Logo */
+        :root { 
+            --it-logo-blue: #1e3a8a; 
+            --it-orange: #f97316; 
+            --it-green: #16a34a; 
+        }
+
+        .group:hover .group-hover\:block { display: block; }
+        @keyframes soft-pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(249, 115, 22, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        }
+        .animate-donate { animation: soft-pulse 2s infinite; }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #fff; margin: 0; scroll-behavior: smooth; }
+        .hero-viewport { height: 78vh; display: flex; align-items: center; position: relative; overflow: hidden; }
+        
+        /* Typing cursor effect on dynamic text */
+        .typing-cursor::after { content: ""; }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        .dash-nav { height: 4px; width: 25px; background-color: #e5e7eb; border-radius: 2px; transition: 0.4s; }
+        .dash-nav.active { background-color: #ff8a00; width: 45px; }
+        .impact-box { background: var(--it-green); border-bottom: 8px solid #ff8a00; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        .social-sidebar { position: absolute; left: 20px; top: 50%; transform: translateY(-50%); display: flex; flex-direction: column; gap: 20px; z-index: 50; background: white; padding: 15px; border-radius: 50px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); border: 1px solid #f1f5f9; }
+    .about-section { background-color: #64748b !important; border-top: 1px solid #475569 !important; }
+        
+        .btn-outline { border: 1px solid var(--it-logo-blue); color: var(--it-logo-blue); transition: 0.3s; font-weight: 500; }
+        .btn-outline:hover { background: var(--it-logo-blue); color: #fff; }
+
+        @keyframes scrollLogo { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .logo-track { display: flex; width: max-content; animation: scrollLogo 25s linear infinite; }
+        .section-title { position: relative; display: inline-block; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 4px; background: var(--it-orange); }
+        .section-title::before { content: ''; position: absolute; left: 45px; bottom: 0; width: 80px; height: 4px; background: var(--it-green); }
+        .straight-phone { transform: rotate(90deg); display: inline-block; }
+    </style>
+</head>
+<body class="bg-white font-sans overflow-x-hidden">
+
+    <div class="bg-[#1e3a8a] text-white py-3.5 px-6 md:px-12 flex flex-wrap justify-between items-center shadow-lg relative z-[100]">
+        <div class="flex items-center space-x-4 text-[14px] font-semibold ml-4">
+            <div class="flex items-center"><i class="fas fa-phone-alt mr-2.5 text-green-400 text-base scale-x-[-1]"></i><span class="tracking-wide">+91-8409744414</span></div>
+            <div class="flex items-center border-l border-white/30 pl-4"><i class="fas fa-envelope mr-2.5 text-green-400 text-base"></i><span class="tracking-wide">support@itclubgroup.org</span></div>
+        </div>
+        <div class="flex items-center space-x-4 mt-3 md:mt-0 mr-2">
+            <a href="csr.html" class="bg-[#ff8a00] hover:bg-white hover:text-[#ff8a00] text-white px-5 py-2.5 rounded-md text-[12px] font-bold uppercase transition-all shadow-md flex items-center"><i class="fas fa-handshake-angle mr-2 text-[16px]"></i> CSR Partner With Us</a>
+            <a href="csr.html" class="bg-[#22c55e] hover:bg-white hover:text-[#22c55e] text-white px-5 py-2.5 rounded-md text-[12px] font-bold uppercase transition-all shadow-md flex items-center"><i class="fas fa-cloud-download-alt mr-2 text-[16px]"></i> Org. Profile</a>
+            <a href="#" class="bg-blue-500 hover:bg-white hover:text-blue-500 text-white px-5 py-2.5 rounded-md text-[12px] font-bold uppercase transition-all shadow-md flex items-center"><i class="fas fa-users-gear mr-2 text-[16px]"></i> Implementation Partner</a>
+        </div>
+    </div>
+    
+    <nav class="sticky top-0 z-50 bg-white shadow-xl px-6 md:px-12 py-3 flex justify-between items-center">
+        <div class="flex items-center py-1 ml-6"><a href="index.html"><img src="logo.png" alt="ITCLUB Foundation" class="h-16 md:h-20 w-auto object-contain"></a></div>
+        <div class="hidden xl:flex items-center ml-auto mr-4">
+            <ul class="flex space-x-5 font-bold text-gray-800 text-[14px] uppercase tracking-tight items-center">
+                <li><a href="#" class="hover:text-[#1e3a8a] transition-colors">Home</a></li>
+                <li class="relative group">
+                    <a href="#" class="hover:text-[#1e3a8a] flex items-center">About Us <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                    <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-72 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg left-0">
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-info-circle mr-3 text-[#1e3a8a]"></i><a href="#">About ITCLUB Foundation</a></li>
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-eye mr-3 text-[#1e3a8a]"></i><a href="#">Mission & Vision</a></li>
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-file-contract mr-3 text-[#1e3a8a]"></i><a href="#">Legal & Registration</a></li>
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-user-friends mr-3 text-[#1e3a8a]"></i><a href="#">Our Team & Management</a></li>
+                        <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-history mr-3 text-[#1e3a8a]"></i><a href="#">Our Journey & Milestones</a></li>
+                    </ul>
+                </li>
+                <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center">Our Program <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                    <div class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-80 border-t-4 border-[#1e3a8a] p-2 rounded-b-xl left-0">
+                        <div class="flex flex-col text-gray-700 font-bold">
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-tools mr-3 text-[#1e3a8a] w-5"></i> Skill Development</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-female mr-3 text-[#1e3a8a] w-5"></i> Women Empowerment</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-user-graduate mr-3 text-[#1e3a8a] w-5"></i> Youth Development</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-hands-helping mr-3 text-[#1e3a8a] w-5"></i> Livelihood Promotion</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-laptop-code mr-3 text-[#1e3a8a] w-5"></i> Education & Digital</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-heartbeat mr-3 text-[#1e3a8a] w-5"></i> Healthcare & Nutrition</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-ambulance mr-3 text-[#1e3a8a] w-5"></i> Relief & Humanitarian</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-university mr-3 text-[#1e3a8a] w-5"></i> Govt. Schemes</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-leaf mr-3 text-[#1e3a8a] w-5"></i> Environmental</a>
+                            <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] flex items-center transition"><i class="fas fa-paint-brush mr-3 text-[#1e3a8a] w-5"></i> Arts, Culture & Heritage</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center">Impact <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                    <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-60 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg left-0">
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-star mr-3 text-[#1e3a8a]"></i><a href="#">Success Stories</a></li>
+                        <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-file-alt mr-3 text-[#1e3a8a]"></i><a href="#">Annual Reports</a></li>
+                    </ul>
+                </li>
+                <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center">News & Media <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                    <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-72 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg left-0">
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-calendar-check mr-3 text-[#1e3a8a]"></i><a href="#">Events & Activities</a></li>
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-images mr-3 text-[#1e3a8a]"></i><a href="#">Photo & Video Gallery</a></li>
+                        <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-newspaper mr-3 text-[#1e3a8a]"></i><a href="#">Media & Press</a></li>
+                    </ul>
+                </li>
+                <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center text-gray-800">Join Us <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                    <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-72 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg right-0 xl:left-auto">
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-heart mr-3 text-orange-500"></i><a href="#">Donate Now</a></li>
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-handshake mr-3 text-[#1e3a8a]"></i><a href="#">CSR Partner</a></li>
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-hand-holding-heart mr-3 text-[#1e3a8a]"></i><a href="#">Implementation Partner</a></li>
+                        <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-user-plus mr-3 text-[#1e3a8a]"></i><a href="#">Become a Volunteer</a></li>
+                        <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-graduation-cap mr-3 text-[#1e3a8a]"></i><a href="#">Internship Program</a></li>
+                    </ul>
+                </li>
+                <li><a href="#" class="hover:text-[#1e3a8a] transition-colors">Contact Us</a></li>
+            </ul>
+        </div>
+        <button class="animate-donate bg-[#f97316] text-white px-5 py-2.5 rounded-lg font-bold text-[14px] uppercase shadow-lg hover:bg-blue-900 transition-all flex items-center mr-2"><i class="fas fa-heart mr-2"></i> Donate Now</button>
+    </nav>
+
+    <section class="hero-viewport px-6 md:px-20">
+        <div class="social-sidebar hidden xl:flex">
+            <a href="https://wa.me/918292999947" class="text-[#25D366] hover:scale-125 transition-all"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://www.facebook.com/itclubfoundatio" class="text-[#1877f2] hover:scale-125 transition-all"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/itclubfoundation/" class="text-[#e4405f] hover:scale-125 transition-all"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/itclubfoundation/" class="text-[#0077b5] hover:scale-125 transition-all"><i class="fab fa-linkedin-in"></i></a>
+<a href="https://x.com/itclubfoundatio" class="text-[#1da1f2] hover:scale-125 transition-all"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.youtube.com/@itclubfoundation" class="text-[#ff0000] hover:scale-125 transition-all"><i class="fab fa-youtube"></i></a>
+        </div>
+        
+        <div class="max-w-[1400px] mx-auto flex flex-col lg:flex-row items-center gap-8 z-10 w-full pl-4">
+            <div class="w-full lg:w-[45%] space-y-6">
+                <div class="flex items-center gap-3"><span class="w-8 h-[2px] bg-[#ff8a00]"></span><p class="text-[#ff8a00] font-bold tracking-[4px] text-[11px] uppercase italic">Our Mission Areas</p></div>
+                <div class="min-h-[160px] flex flex-col justify-center">
+                    <h2 id="line1" class="text-4xl md:text-5xl lg:text-6xl font-black text-[#1e3a8a] uppercase leading-tight"></h2>
+                    
+                    <span class="relative inline-block w-full">
+                        <span id="watermark" class="absolute left-0 top-0 font-black text-4xl md:text-5xl lg:text-6xl uppercase leading-tight text-blue-900/10 select-none pointer-events-none z-0"></span>
+                        <h2 id="line2" class="relative text-4xl md:text-5xl lg:text-6xl font-black text-[#22c55e] uppercase leading-tight z-10 inline-block transition-all duration-500 ease-in-out transform tracking-wide"></h2>
+                    </span>
+                </div>
+                <div class="min-h-[60px]"><p id="description" class="text-gray-600 text-[15px] font-medium leading-relaxed border-l-4 border-[#ff8a00] pl-6 italic"></p></div>
+                <div class="pt-4 flex flex-col items-start gap-8">
+                    <a href="#" class="bg-[#ff8a00] text-white px-12 py-4 rounded-2xl font-bold text-xs uppercase tracking-widest shadow-xl hover:bg-[#1e3a8a] transition-all">Donate Now</a>
+                    <div id="dots" class="flex items-center gap-2"><span class="dash-nav active"></span><span class="dash-nav"></span><span class="dash-nav"></span><span class="dash-nav"></span><span class="dash-nav"></span><span class="dash-nav"></span></div>
+                </div>
+            </div>
+            <div class="w-full lg:w-[65%]">
+                <div class="grid grid-cols-12 gap-2">
+                    <div class="col-span-8 overflow-hidden rounded-[2.5rem] shadow-2xl" style="margin-top: 17px; margin-bottom: 2px;"><img id="img-main" src="" class="w-full h-72 md:h-80 object-cover transition-all duration-1000"></div>
+                    <div class="col-span-4 impact-box rounded-[2.5rem] shadow-xl p-6 text-white" style="margin-top: 17px; margin-bottom: 2px;"><i class="fas fa-quote-left text-2xl mb-4 opacity-60"></i><h4 class="text-[13px] md:text-[15px] font-black uppercase leading-tight mb-2 tracking-widest">CONNECTING COMMUNITIES</h4><div class="w-12 h-[2px] bg-white opacity-40 mb-3"></div><h4 class="text-[11px] font-bold uppercase tracking-[3px] opacity-90">EMPOWERING PEOPLE</h4></div>
+<div class="col-span-4 rounded-[2rem] overflow-hidden shadow-lg border border-gray-100" style="margin-top: 2px; margin-bottom: 15px;"><img id="img-sub-1" src="" class="w-full h-32 md:h-40 object-cover"></div>
+<div class="col-span-4 rounded-[2rem] overflow-hidden shadow-lg border border-gray-100" style="margin-top: 2px; margin-bottom: 15px;"><img id="img-sub-2" src="" class="w-full h-32 md:h-40 object-cover"></div>
+<div class="col-span-4 rounded-[2rem] overflow-hidden shadow-lg border border-gray-100" style="margin-top: 2px; margin-bottom: 15px;"><img id="img-sub-3" src="" class="w-full h-32 md:h-40 object-cover"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-20 bg-slate-50 border-t border-b border-slate-100">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4 pt-10">
+                            <img src="https://images.unsplash.com/photo-1524178232363-1fb2b075b655" class="rounded-[2.5rem] shadow-lg h-64 object-cover w-full">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998" class="rounded-[2.5rem] shadow-lg h-44 object-cover w-full">
+                        </div>
+                        <div class="space-y-4">
+                            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" class="rounded-[2.5rem] shadow-lg h-44 object-cover w-full">
+                            <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4" class="rounded-[2.5rem] shadow-lg h-64 object-cover w-full">
+                        </div>
+                    </div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1e3a8a] p-6 rounded-[2rem] shadow-2xl text-center border-4 border-white">
+                        <i class="fas fa-certificate text-white text-2xl mb-2"></i>
+                        <h3 class="text-white text-xl font-black tracking-tight">80G & CSR-1</h3>
+                        <p class="text-white/80 font-medium uppercase tracking-widest text-[9px]">Verified Foundation</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2"><div class="w-10 h-[2px] bg-[#28a745]"></div><h4 class="text-[#28a745] font-black uppercase tracking-[5px] text-[10px]">Professional NGO Profile</h4></div>
+                        <h2 class="text-[#1e3a8a] text-4xl md:text-5xl font-black uppercase leading-tight">Who We <span class="text-[#ff8a00]">Are</span></h2>
+                    </div>
+                    <div class="space-y-4 text-gray-600 text-base leading-relaxed">
+                        <p class="font-bold text-[#1e3a8a] text-lg">ITCLUB Foundation is a value-driven, not-for-profit organization dedicated to advancing India’s national development goals.</p>
+                        <p>With a focus on IT, Artificial Intelligence, and digital innovation, we empower youth, women, and marginalized populations through long-term, impact-oriented programs.</p>
+                        <p>Registered under Section 8 of the Companies Act, we tackle critical challenges by fostering strategic partnerships with CSR organizations to build a digitally empowered society.</p>
+                    </div>
+                    <div class="pt-2"><a href="#" class="inline-block btn-outline px-10 py-3 rounded-xl uppercase text-xs tracking-widest">Read More</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#1e3a8a] py-24 px-6 text-white text-center">
+        <h2 class="text-3xl font-black mb-16 uppercase tracking-widest">Our Growing Impact</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">1+ Lakh</h3><p class="text-[10px] font-bold uppercase text-blue-200">Lives Touched</p></div>
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">100+</h3><p class="text-[10px] font-bold uppercase text-blue-200">Villages Reached</p></div>
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">8+</h3><p class="text-[10px] font-bold uppercase text-blue-200">Active Projects</p></div>
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">10+</h3><p class="text-[10px] font-bold uppercase text-blue-200">Indian States</p></div>
+        </div>
+    </section>
+
+    <section class="py-20 bg-white px-4">
+        <div class="max-w-[1200px] mx-auto">
+            <div class="text-center mb-12"><h2 class="text-3xl font-black text-[#1e3a8a] mb-2 uppercase">OUR RECENT PROJECTS</h2><p class="text-[#f97316] font-bold text-sm">See how we are making an impact.</p></div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group">
+                    <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c" class="w-full h-full object-cover"></div>
+                    <div class="p-5"><h3 class="text-md font-bold text-[#1e3a8a] mb-2 truncate">Shelter for the Homeless</h3><p class="text-gray-600 text-xs mb-5 line-clamp-2">Constructing safe houses for homeless families in rural areas.</p>
+                        <div class="flex gap-3"><button class="flex-1 py-2 border border-gray-200 rounded-lg text-[10px] font-bold uppercase">View Details</button><button class="flex-1 py-2 bg-[#f97316] text-white rounded-lg text-[10px] font-bold uppercase">Donate</button></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group">
+                    <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1593113598332-cd288d649433" class="w-full h-full object-cover"></div>
+                    <div class="p-5"><h3 class="text-md font-bold text-[#1e3a8a] mb-2 truncate">Support for the Elderly</h3><p class="text-gray-600 text-xs mb-5 line-clamp-2">Providing daily essentials and medical care to old age homes.</p>
+                        <div class="flex gap-3"><button class="flex-1 py-2 border border-gray-200 rounded-lg text-[10px] font-bold uppercase">View Details</button><button class="flex-1 py-2 bg-[#f97316] text-white rounded-lg text-[10px] font-bold uppercase">Donate</button></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-2xl shadow-md border border-gray-100 overflow-hidden group">
+                    <div class="h-48 overflow-hidden"><img src="https://images.unsplash.com/photo-1509062522246-3755977927d7" class="w-full h-full object-cover"></div>
+                    <div class="p-5"><h3 class="text-md font-bold text-[#1e3a8a] mb-2 truncate">Digital Literacy Program</h3><p class="text-gray-600 text-xs mb-5 line-clamp-2">Setting up computer labs in 10 rural schools for students.</p>
+                        <div class="flex gap-3"><button class="flex-1 py-2 border border-gray-200 rounded-lg text-[10px] font-bold uppercase">View Details</button><button class="flex-1 py-2 bg-[#f97316] text-white rounded-lg text-[10px] font-bold uppercase">Donate</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"><button class="bg-[#16a34a] text-white px-8 py-3 rounded-full text-xs font-bold uppercase hover:bg-[#14863d]">View All Projects</button></div>
+        </div>
+    </section>
+
+  
+        
+       <section class="py-16 bg-gray-50 overflow-hidden text-center border-t border-b border-gray-100">
+        <div class="max-w-[1400px] mx-auto px-6 mb-12 text-center">
+            <h2 class="text-3xl font-black text-[#1e3a8a] mb-2 uppercase tracking-wide">Affiliations & Accreditations</h2>
+            <p class="text-[#f97316] font-bold text-sm tracking-wide">Authorized Registrations & Legal Compliances</p>
+        </div>
+        
+        <div class="w-full overflow-hidden relative select-none">
+            <div class="logo-track">
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">MCA GOVT OF INDIA</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Ministry of Corporate Affairs<br><span class="text-[#16a34a] text-[9px]">Section 8 Certified</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">NITI AAYOG</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Govt of India Policy Think Tank<br><span class="text-[#16a34a] text-[9px]">Registered Partner</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">INCOME TAX DEPT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Department of Revenue<br><span class="text-[#16a34a] text-[9px]">Govt of India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">EPFO COMPLIANT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Employees' Provident Fund<br><span class="text-[#16a34a] text-[9px]">Ministry of Labour</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">ESIC REGISTERED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Employees' State Insurance<br><span class="text-[#16a34a] text-[9px]">Corporation India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">NGO DARPAN</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Ministry of Statistics & PI<br><span class="text-[#16a34a] text-[9px]">Verified Unique ID</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">MSME CERTIFIED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Micro, Small & Medium Ent.<br><span class="text-[#16a34a] text-[9px]">Udyam Registration</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">GSTIN REGISTERED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Goods and Services Tax<br><span class="text-[#16a34a] text-[9px]">Government of India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">E-ANUDAAN PORTAL</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Ministry of Social Justice<br><span class="text-[#16a34a] text-[9px]">Govt of India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">ISO CERTIFIED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">International Organization<br><span class="text-[#16a34a] text-[9px]">Quality Standard</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">GeM MARKETPLACE</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Government e Marketplace<br><span class="text-[#16a34a] text-[9px]">Registered Vendor</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">CSR BIHAR GOVT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Corporate Social Responsibility<br><span class="text-[#16a34a] text-[9px]">State Approved</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">CSR INDIA GOVT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">National CSR Portal India<br><span class="text-[#16a34a] text-[9px]">Eligible Entity</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">MCA GOVT OF INDIA</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Ministry of Corporate Affairs<br><span class="text-[#16a34a] text-[9px]">Section 8 Certified</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">NITI AAYOG</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Govt of India Policy Think Tank<br><span class="text-[#16a34a] text-[9px]">Registered Partner</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">INCOME TAX DEPT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Department of Revenue<br><span class="text-[#16a34a] text-[9px]">Govt of India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">EPFO COMPLIANT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Employees' Provident Fund<br><span class="text-[#16a34a] text-[9px]">Ministry of Labour</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">ESIC REGISTERED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Employees' State Insurance<br><span class="text-[#16a34a] text-[9px]">Corporation India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">NGO DARPAN</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Ministry of Statistics & PI<br><span class="text-[#16a34a] text-[9px]">Verified Unique ID</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">MSME CERTIFIED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Micro, Small & Medium Ent.<br><span class="text-[#16a34a] text-[9px]">Udyam Registration</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">GSTIN REGISTERED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Goods and Services Tax<br><span class="text-[#16a34a] text-[9px]">Government of India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">E-ANUDAAN PORTAL</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Ministry of Social Justice<br><span class="text-[#16a34a] text-[9px]">Govt of India</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">ISO CERTIFIED</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">International Organization<br><span class="text-[#16a34a] text-[9px]">Quality Standard</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">GeM MARKETPLACE</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Government e Marketplace<br><span class="text-[#16a34a] text-[9px]">Registered Vendor</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">CSR BIHAR GOVT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">Corporate Social Responsibility<br><span class="text-[#16a34a] text-[9px]">State Approved</span></span>
+                </div>
+
+                <div class="flex flex-col items-center justify-center bg-white p-4 mx-3 rounded-xl border border-blue-100 min-w-[240px] shadow-sm h-24 border-t-4 border-t-[#1e3a8a]">
+                    <span class="text-[11px] font-black text-[#1e3a8a] tracking-wider uppercase mb-1">CSR INDIA GOVT</span>
+                    <span class="text-[10px] font-bold text-gray-500 text-center leading-tight">National CSR Portal India<br><span class="text-[#16a34a] text-[9px]">Eligible Entity</span></span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="bg-[#1e3a8a] text-white pt-20 pb-2 px-6 md:px-16 border-t border-white/10">
+        <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
+            <div class="space-y-6">
+                <div class="w-60"><img src="logo.png" alt="ITCLUB Foundation" class="h-30 w-auto object-contain [filter:brightness(0)_invert(1)]"></div>
+                <p class="text-[#16a34a] font-black text-[13px] uppercase tracking-[0.16em] w-56 text-left whitespace-nowrap">Trust In Every Initiative</p>
+                <p class="text-blue-100 text-sm leading-relaxed">ITCLUB Foundation is committed to driving positive change and building a more equitable, digitally empowered society.</p>
+            </div>
+            <div>
+                <h4 class="text-lg font-black mb-8 border-l-4 border-[#f97316] pl-4 uppercase tracking-widest">Quick Links</h4>
+                <ul class="text-blue-100 text-sm space-y-4">
+                    <li><a href="#" class="hover:text-white flex items-center"><span class="mr-2">></span> Home</a></li>
+                    <li><a href="#" class="hover:text-white flex items-center"><span class="mr-2">></span> About Us</a></li>
+                    <li><a href="#" class="hover:text-white flex items-center"><span class="mr-2">></span> Projects</a></li>
+                    <li><a href="#" class="hover:text-white flex items-center"><span class="mr-2">></span> Join Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-lg font-black mb-8 border-l-4 border-[#f97316] pl-4 uppercase tracking-widest">Contact Info</h4>
+                <div class="text-blue-100 text-sm space-y-6">
+                    <p class="leading-relaxed">Head Office:<br>ITCLUB House, Madhopara khazanchi hat<br>Bhatta Bazar, Purnea-854301<br>Bihar, India</p>
+                    <p class="flex items-center"><span class="straight-phone mr-3 text-[#16a34a]"><i class="fas fa-phone-alt"></i></span> +91-8409744414, +91-8292999947</p>
+                    <p class="flex items-center"><i class="fas fa-envelope text-[#16a34a] mr-3"></i> support@itclubgroup.org</p>
+                </div>
+            </div>
+            <div>
+                <h4 class="text-lg font-black mb-8 border-l-4 border-[#f97316] pl-4 uppercase tracking-widest">Stay Connected</h4>
+                <div class="flex mb-8"><input type="email" placeholder="Your Email" class="bg-white/5 border border-white/10 p-4 rounded-l w-full text-xs outline-none text-white"><button class="bg-[#16a34a] px-6 py-4 rounded-r text-xs font-black uppercase">Join</button></div>
+                <div class="flex gap-6">
+                    <a href="https://wa.me/918292999947" class="text-xl text-blue-200 hover:text-white"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/itclubfoundatio" class="text-xl text-blue-200 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/itclubfoundation/" class="text-xl text-blue-200 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/itclubfoundation/" class="text-xl text-blue-200 hover:text-white"><i class="fab fa-linkedin"></i></a>
+<a href="https://x.com/itclubfoundatio" class="text-xl text-blue-200 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/@itclubfoundation" class="text-xl text-blue-200 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/5 pt-8 text-center text-[9px] text-blue-300 tracking-[0.2em] uppercase"><p>© 2026 ITCLUB FOUNDATION. ALL RIGHTS RESERVED. DESIGNED BY <span class="text-white">ITCLUB</span></p></div>
+    </footer>
+
+    <script>
+        const contentData = [
+            { wm: "DEVELOPMENT", l1: "SKILL", l2: "DEVELOPMENT", desc: "Providing world-class vocational training to rural youth to create sustainable livelihoods.", imgs: ["https://images.unsplash.com/photo-1524178232363-1fb2b075b655", "https://images.unsplash.com/photo-1531482615713-2afd69097998", "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4", "https://images.unsplash.com/photo-1513258496099-48168024adb0"] },
+            { wm: "LITERACY", l1: "EDUCATION &", l2: "LITERACY", desc: "Bridging the digital divide by setting up smart computer labs in rural schools.", imgs: ["https://images.unsplash.com/photo-1509062522246-3755977927d7", "https://images.unsplash.com/photo-1519389950473-47ba0277781c", "https://images.unsplash.com/photo-1497633762265-9d179a990aa6", "https://images.unsplash.com/photo-1503676260728-1c00da094a0b"] },
+            { wm: "EMPOWERMENT", l1: "WOMEN", l2: "EMPOWERMENT", desc: "Empowering rural women through entrepreneurship and digital livelihood support.", imgs: ["https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e", "https://images.unsplash.com/photo-1590650153855-d9e808231d41", "https://images.unsplash.com/photo-1551836022-d5d88e9218df", "https://images.unsplash.com/photo-1589115411990-597d609f483c"] },
+            { wm: "NUTRITION", l1: "HEALTH &", l2: "NUTRITION", desc: "Delivering essential medical aid and nutritional support to marginalized families.", imgs: ["https://images.unsplash.com/photo-1504813184591-01572f98c85f", "https://images.unsplash.com/photo-1576091160550-2173bdd99625", "https://images.unsplash.com/photo-1511174511577-2352fcaefd44", "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7"] },
+            { wm: "CARE", l1: "ENVIRONMENTAL", l2: "CARE", desc: "Promoting sustainability through tree plantation drives and solar energy awareness.", imgs: ["https://images.unsplash.com/photo-1542601906990-b4d3fb778b09", "https://images.unsplash.com/photo-1470115636492-6d2b56f9146d", "https://images.unsplash.com/photo-1441974231531-c6227db76b6e", "https://images.unsplash.com/photo-1501854140801-50d01698950b"] },
+            { wm: "SUPPORT", l1: "HUMANITARIAN", l2: "SUPPORT", desc: "Rapid disaster response and providing essential needs to those in crisis.", imgs: ["https://images.unsplash.com/photo-1488521787991-ed7bbaae773c", "https://images.unsplash.com/photo-1469571486292-0ba58a3f068b", "https://images.unsplash.com/photo-1593113598332-cd288d649433", "https://images.unsplash.com/photo-1532629345422-7515f3d16bb8"] }
+        ];
+
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function updateDots() {
+            const dotsContainer = document.getElementById('dots');
+            if (dotsContainer) {
+                dotsContainer.innerHTML = contentData.map((_, i) => 
+                    `<span class="dash-nav ${i === index ? 'active' : ''}"></span>`
+                ).join('');
+            }
+        }
+
+        function typeSliderEffect() {
+            const current = contentData[index];
+            const line1El = document.getElementById('line1');
+            const line2El = document.getElementById('line2');
+            const watermarkEl = document.getElementById('watermark');
+            const descEl = document.getElementById('description');
+
+            if (line1El && line1El.innerText !== current.l1) {
+                line1El.innerText = current.l1;
+                if (watermarkEl) watermarkEl.innerText = current.wm; 
+                if (descEl) descEl.innerText = current.desc;
+                
+                const imgMain = document.getElementById('img-main');
+                const imgSub1 = document.getElementById('img-sub-1');
+                const imgSub2 = document.getElementById('img-sub-2');
+                const imgSub3 = document.getElementById('img-sub-3');
+
+                if (imgMain) imgMain.src = current.imgs[0];
+                if (imgSub1) imgSub1.src = current.imgs[1];
+                if (imgSub2) imgSub2.src = current.imgs[2];
+                if (imgSub3) imgSub3.src = current.imgs[3];
+                updateDots();
+            }
+
+            const fullText = current.l2;
+
+            if (line2El) {
+                if (isDeleting) {
+                    line2El.innerHTML = fullText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    line2El.innerHTML = fullText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+            }
+
+            let typeSpeed = isDeleting ? 60 : 120;
+
+            if (!isDeleting && charIndex === fullText.length) {
+                typeSpeed = 2500; 
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % contentData.length; 
+                typeSpeed = 800; 
+            }
+
+            setTimeout(typeSliderEffect, typeSpeed);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            typeSliderEffect();
+        });
+    </script>
+</body>
+</html>
