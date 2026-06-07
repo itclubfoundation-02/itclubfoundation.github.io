@@ -1,0 +1,1061 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ITCLUB FOUNDATION | Official</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght=400;500;600;700;900&display=swap');
+        
+        /* Brand Identity Colors Matching the Official Logo */
+        :root { 
+            --it-logo-blue: #1e3a8a; 
+            --it-orange: #f97316; 
+            --it-green: #16a34a; 
+        }
+
+        .group:hover .group-hover\:block { display: block; }
+        @keyframes soft-pulse {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 10px rgba(249, 115, 22, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(249, 115, 22, 0); }
+        }
+        .animate-donate { animation: soft-pulse 2s infinite; }
+
+        body { font-family: 'Poppins', sans-serif; background-color: #fff; margin: 0; scroll-behavior: smooth; }
+        .social-sidebar { 
+    position: fixed !important; 
+    left: 10px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    z-index: 1000 !important; 
+    background: white; 
+    padding: 15px; 
+    border-radius: 50px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+}
+        
+        /* Typing cursor effect on dynamic text */
+        .typing-cursor::after { content: ""; }
+        @keyframes blink { 50% { opacity: 0; } }
+        
+        .dash-nav { height: 4px; width: 25px; background-color: #e5e7eb; border-radius: 2px; transition: 0.4s; }
+        .dash-nav.active { background-color: #ff8a00; width: 45px; }
+        .impact-box { background: var(--it-green); border-bottom: 8px solid #ff8a00; display: flex; flex-direction: column; justify-content: center; align-items: center; text-align: center; }
+        /* Sidebar ko fixed kijiye aur z-index badha dijiye */
+.social-sidebar { 
+    position: fixed !important; /* Absolute se hatakar Fixed kiya */
+    left: 20px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: flex; 
+    flex-direction: column; 
+    gap: 20px; 
+    z-index: 9999 !important; /* Sabse upar dikhega */
+    background: white; 
+    padding: 15px; 
+    border-radius: 50px; 
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+    border: 1px solid #f1f5f9; 
+}
+        
+        .btn-outline { border: 1px solid var(--it-logo-blue); color: var(--it-logo-blue); transition: 0.3s; font-weight: 500; }
+        .btn-outline:hover { background: var(--it-logo-blue); color: #fff; }
+
+        @keyframes scrollLogo { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+        .logo-track { display: flex; width: max-content; animation: scrollLogo 25s linear infinite; }
+        .section-title { position: relative; display: inline-block; padding-bottom: 15px; }
+        .section-title::after { content: ''; position: absolute; left: 0; bottom: 0; width: 40px; height: 4px; background: var(--it-orange); }
+        .section-title::before { content: ''; position: absolute; left: 45px; bottom: 0; width: 80px; height: 4px; background: var(--it-green); }
+        .straight-phone { transform: rotate(90deg); display: inline-block; }
+    </style>
+</head>
+<body class="bg-white font-sans overflow-x-hidden">
+<!-- =========================================================
+         FIXED TOP UTILITY BAR (LAPTOP VIEW PROTECTED | MOBILE VIEW FIXED)
+         ========================================================= -->
+    <div class="bg-[#1e3a8a] text-white py-2.5 px-4 md:px-12 flex flex-col lg:flex-row justify-between items-center gap-2 lg:gap-3 shadow-lg relative z-[100]">
+        
+        <!-- Contact Information Block (Mobile me 1 line me top par, Laptop me left side) -->
+        <div class="flex flex-row items-center justify-center gap-4 text-[11px] md:text-sm font-semibold text-center w-full lg:w-auto">
+            <div class="flex items-center whitespace-nowrap">
+                <i class="fas fa-phone-alt mr-1.5 text-green-400 scale-x-[-1] text-xs"></i>
+                <span class="tracking-wide">+91-8409744414</span>
+            </div>
+            <div class="flex items-center border-l border-white/30 pl-4 whitespace-nowrap">
+                <i class="fas fa-envelope mr-1.5 text-green-400 text-xs"></i>
+                <span class="tracking-wide">info@itclubfoundation.org</span>
+            </div>
+        </div>
+        
+        <!-- Action Buttons Block (Mobile me 1 line me bottom par, Laptop me right side bade size me) -->
+        <div class="flex flex-row items-center justify-center lg:justify-end gap-1 sm:gap-2 w-full lg:w-auto mt-1 lg:mt-0">
+            <a href="csr.html" class="bg-[#ff8a00] hover:bg-white hover:text-[#ff8a00] text-white px-1.5 lg:px-4 py-1.5 lg:py-2.5 rounded text-[8.5px] sm:text-[10px] lg:text-[11px] font-bold uppercase transition-all shadow-md flex items-center justify-center whitespace-nowrap flex-1 lg:flex-none lg:min-w-[195px]">
+                <i class="fas fa-handshake-angle mr-1 lg:mr-2 text-[9px] lg:text-sm"></i> CSR Partner With Us
+            </a>
+            <a href="csr.html" class="bg-[#22c55e] hover:bg-white hover:text-[#22c55e] text-white px-1.5 lg:px-4 py-1.5 lg:py-2.5 rounded text-[8.5px] sm:text-[10px] lg:text-[11px] font-bold uppercase transition-all shadow-md flex items-center justify-center whitespace-nowrap flex-1 lg:flex-none lg:min-w-[195px]">
+                <i class="fas fa-cloud-download-alt mr-1 lg:mr-2 text-[9px] lg:text-sm"></i> Organization Profile
+            </a>
+            <a href="#" class="bg-blue-500 hover:bg-white hover:text-blue-500 text-white px-1.5 lg:px-4 py-1.5 lg:py-2.5 rounded text-[8.5px] sm:text-[10px] lg:text-[11px] font-bold uppercase transition-all shadow-md flex items-center justify-center whitespace-nowrap flex-1 lg:flex-none lg:min-w-[195px]">
+                <i class="fas fa-users-gear mr-1 lg:mr-2 text-[9px] lg:text-sm"></i> Implementation Partner
+            </a>
+        </div>
+    </div>
+   <nav class="sticky top-0 z-50 bg-white shadow-xl px-4 md:px-12 py-3 flex justify-between items-center">
+    <!-- LOGO AREA -->
+    <div class="flex items-center py-1 ml-2">
+        <a href="index.html">
+            <img src="logo.png" alt="ITCLUB Foundation" class="h-10 md:h-16 lg:h-20 w-auto object-contain">
+        </a>
+    </div>
+
+    <!-- LAPTOP / DESKTOP MENU (Mobile par automatic chhup jayega) -->
+    <div class="hidden xl:flex items-center ml-auto mr-4">
+        <ul class="flex space-x-5 font-bold text-gray-800 text-[14px] uppercase tracking-tight items-center">
+            <li><a href="#" class="hover:text-[#1e3a8a] transition-colors">Home</a></li>
+            <li class="relative group">
+                <a href="#" class="hover:text-[#1e3a8a] flex items-center">About Us <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-72 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg left-0">
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-info-circle mr-3 text-[#1e3a8a]"></i><a href="#">About ITCLUB Foundation</a></li>
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-eye mr-3 text-[#1e3a8a]"></i><a href="#">Mission & Vision</a></li>
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-file-contract mr-3 text-[#1e3a8a]"></i><a href="#">Legal & Registration</a></li>
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-user-friends mr-3 text-[#1e3a8a]"></i><a href="#">Our Team & Management</a></li>
+                    <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-history mr-3 text-[#1e3a8a]"></i><a href="#">Our Journey & Milestones</a></li>
+                </ul>
+            </li>
+            <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center">Our Program <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                <div class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-80 border-t-4 border-[#1e3a8a] p-2 rounded-b-xl left-0">
+                    <div class="flex flex-col text-gray-700 font-bold">
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-tools mr-3 text-[#1e3a8a] w-5"></i> Skill Development</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-female mr-3 text-[#1e3a8a] w-5"></i> Women Empowerment</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-user-graduate mr-3 text-[#1e3a8a] w-5"></i> Youth Development</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-hands-helping mr-3 text-[#1e3a8a] w-5"></i> Livelihood Promotion</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-laptop-code mr-3 text-[#1e3a8a] w-5"></i> Education & Digital Literacy</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-heartbeat mr-3 text-[#1e3a8a] w-5"></i> Healthcare & Nutrition</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-ambulance mr-3 text-[#1e3a8a] w-5"></i> Relief & Humanitarian</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-university mr-3 text-[#1e3a8a] w-5"></i> Govt. Schemes</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] border-b border-gray-100 flex items-center transition"><i class="fas fa-leaf mr-3 text-[#1e3a8a] w-5"></i> Environmental Sustainability</a>
+                        <a href="#" class="p-3.5 hover:bg-blue-50 text-[13px] flex items-center transition"><i class="fas fa-paint-brush mr-3 text-[#1e3a8a] w-5"></i> Arts, Culture & Heritage</a>
+                    </div>
+                </div>
+            </li>
+            <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center">Impact <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-60 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg left-0">
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-star mr-3 text-[#1e3a8a]"></i><a href="#">Success Stories</a></li>
+                    <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-file-alt mr-3 text-[#1e3a8a]"></i><a href="#">Annual Reports</a></li>
+                </ul>
+            </li>
+            <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center">News & Media <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-72 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg left-0">
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-calendar-check mr-3 text-[#1e3a8a]"></i><a href="#">Events & Activities</a></li>
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-images mr-3 text-[#1e3a8a]"></i><a href="#">Photo & Video Gallery</a></li>
+                    <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-newspaper mr-3 text-[#1e3a8a]"></i><a href="#">Media & Press</a></li>
+                </ul>
+            </li>
+            <li class="relative group"><a href="#" class="hover:text-[#1e3a8a] flex items-center text-gray-800">Join Us <i class="fas fa-chevron-down ml-1.5 text-[10px]"></i></a>
+                <ul class="absolute hidden group-hover:block bg-white shadow-2xl mt-0 w-72 border-t-4 border-[#1e3a8a] p-2 rounded-b-lg right-0 xl:left-auto">
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-heart mr-3 text-orange-500"></i><a href="#">Donate Now</a></li>
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-handshake mr-3 text-[#1e3a8a]"></i><a href="#">CSR Partner</a></li>
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-hand-holding-heart mr-3 text-[#1e3a8a]"></i><a href="#">Implementation Partner</a></li>
+                    <li class="p-3 hover:bg-blue-50 border-b text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-user-plus mr-3 text-[#1e3a8a]"></i><a href="#">Become a Volunteer</a></li>
+                    <li class="p-3 hover:bg-blue-50 text-gray-700 font-bold text-[13px] flex items-center"><i class="fas fa-graduation-cap mr-3 text-[#1e3a8a]"></i><a href="#">Internship Program</a></li>
+                </ul>
+            </li>
+            <li><a href="#" class="hover:text-[#1e3a8a] transition-colors">Contact Us</a></li>
+        </ul>
+    </div>
+
+    <!-- FIXED MOBILE VIEW (Sirf ek Donate aur ek 3-line Menu icon) -->
+    <div class="xl:hidden flex items-center gap-3 ml-auto mr-2 relative z-[110]">
+        <a href="#" class="bg-orange-500 hover:bg-orange-600 text-white font-bold text-[11px] px-3.5 py-2 rounded-lg shadow-md flex items-center tracking-wider transition-all transform active:scale-95">
+            <i class="fas fa-heart mr-1.5 text-red-100 animate-pulse"></i> DONATE
+        </a>
+        <button onclick="toggleMobileMenu()" class="text-gray-700 focus:outline-none p-1.5">
+            <i id="menuIcon" class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- DESKTOP ONLY DONATE BUTTON (Laptop par dikhega, mobile par nahi) -->
+    <button class="hidden xl:flex animate-donate bg-[#f97316] text-white px-5 py-2.5 rounded-lg font-bold text-[14px] uppercase shadow-lg hover:bg-blue-900 transition-all items-center mr-2"><i class="fas fa-heart mr-2"></i> Donate Now</button>
+</nav>
+<!-- =========================================================
+     PREMIUM MATCHING BLUE LATEST UPDATES TICKER (SPEED OPTIMIZED)
+     ========================================================= -->
+
+<style>
+    /* Continuous premium marquee loop without any blank screen lag */
+    @keyframes professionalTicker {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-33.333%); }
+    }
+    .animate-corporate-ticker {
+        display: flex;
+        width: max-content;
+        animation: professionalTicker 18s linear infinite; /* Medium-Fast speed for high readability */
+    }
+    .animate-corporate-ticker:hover {
+        animation-play-state: paused; /* Mouse lane par text ruk jayega */
+    }
+</style>
+
+<!-- Sleek, Top-Bar Matching Blue Update Bar -->
+<div class="bg-[#1e3a8a] text-white py-2.5 border-b border-[#ff8a00] overflow-hidden relative z-40 shadow-md select-none">
+    <div class="max-w-[1400px] mx-auto px-6 flex items-center justify-between">
+        
+        <!-- Professional Glassmorphism Typography Badge (Sticky Left - Same Blue Background) -->
+        <div class="flex items-center gap-2 border-r border-blue-700/60 pr-4 mr-4 shrink-0 z-50 bg-[#1e3a8a]">
+            <span class="inline-block w-2 h-2 rounded-full bg-[#ff8a00] animate-ping"></span>
+            <span class="text-[11px] font-black uppercase tracking-widest text-[#ff8a00]">Latest Updates</span>
+        </div>
+        
+        <!-- Continuous Moving Text Window -->
+        <div class="w-full overflow-hidden relative">
+            <div class="animate-corporate-ticker flex items-center text-xs md:text-[13px] font-semibold tracking-wide text-gray-100 cursor-pointer">
+                
+                <!-- ================== BLOCK 1 (ORIGINAL) ================== -->
+                <span class="mx-12 flex items-center shrink-0">
+                    <i class="fas fa-bullhorn mr-2.5 text-[#ff8a00]"></i> 
+                    ITCLUB Foundation has successfully launched its new Digital Literacy & AI Training Center!
+                </span>
+                <span class="mx-12 flex items-center shrink-0">
+                    <i class="fas fa-briefcase mr-2.5 text-[#22c55e]"></i> 
+                    Free IT Skills & Employability Training Camp starting soon for Underprivileged Youth.
+                </span>
+                <span class="mx-12 flex items-center shrink-0">
+                    <i class="fas fa-handshake mr-2.5 text-[#38bdf8]"></i> 
+                    Inviting Corporate Partners & CSR Companies for Collaborative Social Impact Initiatives.
+                </span>
+
+                <!-- ================== BLOCK 2 (CLONE FOR LOOP) ================== -->
+                <span class="mx-12 flex items-center shrink-0" aria-hidden="true">
+                    <i class="fas fa-bullhorn mr-2.5 text-[#ff8a00]"></i> 
+                    ITCLUB Foundation has successfully launched its new Digital Literacy & AI Training Center!
+                </span>
+                <span class="mx-12 flex items-center shrink-0" aria-hidden="true">
+                    <i class="fas fa-briefcase mr-2.5 text-[#22c55e]"></i> 
+                    Free IT Skills & Employability Training Camp starting soon for Underprivileged Youth.
+                </span>
+                <span class="mx-12 flex items-center shrink-0" aria-hidden="true">
+                    <i class="fas fa-handshake mr-2.5 text-[#38bdf8]"></i> 
+                    Inviting Corporate Partners & CSR Companies for Collaborative Social Impact Initiatives.
+                </span>
+
+                <!-- ================== BLOCK 3 (SAFETY BUFFER) ================== -->
+                <span class="mx-12 flex items-center shrink-0" aria-hidden="true">
+                    <i class="fas fa-bullhorn mr-2.5 text-[#ff8a00]"></i> 
+                    ITCLUB Foundation has successfully launched its new Digital Literacy & AI Training Center!
+                </span>
+                <span class="mx-12 flex items-center shrink-0" aria-hidden="true">
+                    <i class="fas fa-briefcase mr-2.5 text-[#22c55e]"></i> 
+                    Free IT Skills & Employability Training Camp starting soon for Underprivileged Youth.
+                </span>
+                <span class="mx-12 flex items-center shrink-0" aria-hidden="true">
+                    <i class="fas fa-handshake mr-2.5 text-[#38bdf8]"></i> 
+                    Inviting Corporate Partners & CSR Companies for Collaborative Social Impact Initiatives.
+                </span>
+
+            </div>
+        </div>
+        
+    </div>
+</div>
+<!-- 3. PREMIUM FLOATING WHATSAPP BUTTON (Mobile View Only) -->
+<a href="https://wa.me/918292999947" target="_blank" class="xl:hidden fixed bottom-6 right-6 z-50 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center shadow-[0_4px_15px_rgba(37,211,102,0.4)] animate-bounce text-2xl">
+    <i class="fab fa-whatsapp"></i>
+</a>
+
+<!-- COMPLETELY OPTIMIZED HERO SECTION (PERFECT LAPTOP SCREEN FIT & NO OVERLAP) -->
+<section class="relative h-screen w-full flex items-center bg-white py-0 my-0 overflow-hidden">
+    </section>
+     <!-- FIXED LEFT SOCIAL BAR - Moved completely to the edge to prevent text overlapping -->
+    <div class="absolute left-0 top-1/2 -translate-y-1/2 bg-white shadow-xl rounded-r-2xl border-y border-r border-gray-100 py-4 px-2 flex flex-col gap-4 z-[99]">
+        <a href="#" class="text-gray-400 hover:text-[#22c55e] text-sm transition-colors"><i class="fab fa-whatsapp"></i></a>
+        <a href="#" class="text-gray-400 hover:text-[#1e3a8a] text-sm transition-colors"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" class="text-gray-400 hover:text-[#f97316] text-sm transition-colors"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="text-gray-400 hover:text-[#1e3a8a] text-sm transition-colors"><i class="fab fa-linkedin-in"></i></a>
+        <a href="#" class="text-gray-400 hover:text-[#1e3a8a] text-sm transition-colors"><i class="fab fa-twitter"></i></a>
+        <a href="#" class="text-gray-400 hover:text-red-600 text-sm transition-colors"><i class="fab fa-youtube"></i></a>
+    </div>
+    <!-- MAIN CONTAINER -->
+    <div class="max-w-7xl mx-auto px-6 md:px-12 w-full">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+            
+            <!-- LEFT SIDE CONTENT: Shifted safely right with pl-4 to avoid social bar -->
+            <div class="lg:col-span-5 space-y-4 z-10 pl-4 md:pl-6">
+                <!-- Mission Tag -->
+                <div class="flex items-center gap-2">
+                    <div class="w-6 h-[2.5px] bg-[#f97316] rounded-full"></div>
+                    <span class="text-[#f97316] text-[11px] font-black uppercase tracking-[0.2em]">Our Mission Areas</span>
+                </div>
+
+                <!-- Text Grid Title -->
+                <div class="flex flex-col justify-center">
+                    <h2 id="line1" class="text-3xl md:text-4xl xl:text-5xl font-black text-[#1e3a8a] uppercase leading-none tracking-tight">
+                        SKILL
+                    </h2>
+                    <h2 id="line2" class="text-3xl md:text-4xl xl:text-5xl font-black text-[#22c55e] uppercase leading-none tracking-tight mt-1">
+                        DEVELOPMENT
+                    </h2>
+                </div>
+
+                <!-- Description Text -->
+                <div class="flex items-stretch gap-3">
+                    <div class="w-[3px] bg-[#f97316] rounded-full shrink-0"></div>
+                    <p id="description" class="text-gray-600 text-xs md:text-sm font-medium italic leading-relaxed py-0.5">
+                        Building future-ready skills that enhance employability and sustainable livelihoods.
+                    </p>
+                </div>
+
+                <!-- Action Button and Dashes -->
+                <div class="pt-2 flex flex-col gap-4">
+                    <div>
+                        <a href="#" class="inline-block bg-[#f97316] hover:bg-[#1e3a8a] text-white font-black text-xs uppercase tracking-widest py-3 px-8 rounded-xl shadow-md transition-all duration-300 transform active:scale-95">
+                            Donate Now
+                        </a>
+                    </div>
+                    <!-- Slider Indicators -->
+                    <div id="dots" class="flex items-center gap-1.5 pt-2">
+                        <!-- JS Controlled Dashes -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- RIGHT SIDE IMAGE GRID: Scaled down perfectly for compact laptop viewports -->
+            <div class="lg:col-span-7 grid grid-cols-12 gap-3 items-stretch w-full">
+                
+                <!-- TOP MAIN IMAGE -->
+                <div class="col-span-8 rounded-[2rem] overflow-hidden shadow-lg h-[180px] md:h-[260px] xl:h-[280px] relative">
+                    <img id="img-main" src="" alt="ITCLUB Main Activity" class="w-full h-full object-cover transition-all duration-500">
+                </div>
+
+                <!-- TOP GREEN SLOGAN BOX -->
+                <div class="col-span-4 rounded-[2rem] shadow-lg p-4 text-white flex flex-col justify-center items-center text-center border border-white/5 select-none bg-[#22c55e] relative overflow-hidden h-[180px] md:h-[260px] xl:h-[280px]">
+                    <div class="absolute bottom-0 left-0 right-0 h-1.5 bg-[#f97316]/90 rounded-b-[2rem]"></div>
+                    <div class="flex flex-col items-center justify-center">
+                        <i class="fas fa-quote-left text-sm md:text-lg mb-2 opacity-80 text-white"></i>
+                        <h4 class="text-[10px] md:text-xs xl:text-sm font-black uppercase leading-tight mb-1 tracking-wider text-white">
+                            CONNECTING <span class="block mt-0.5">COMMUNITIES</span>
+                        </h4>
+                        <div class="w-5 h-[1.5px] bg-white/40 my-1.5 rounded-full"></div>
+                        <h4 class="text-[8px] md:text-[9px] font-extrabold uppercase tracking-[1px] md:tracking-[1.5px] text-white/90 leading-tight">
+                            EMPOWERING PEOPLE
+                        </h4>
+                    </div>
+                </div>
+
+                <!-- BOTTOM ROW OF IMAGES (Compressed heights to ensure exact screen fit) -->
+                <div class="col-span-12 grid grid-cols-3 gap-3">
+                    <div class="rounded-[1.5rem] overflow-hidden shadow-md h-20 md:h-28 xl:h-32">
+                        <img id="img-sub-1" src="" alt="ITCLUB Sub Activity 1" class="w-full h-full object-cover transition-all duration-500">
+                    </div>
+                    <div class="rounded-[1.5rem] overflow-hidden shadow-md h-20 md:h-28 xl:h-32">
+                        <img id="img-sub-2" src="" alt="ITCLUB Sub Activity 2" class="w-full h-full object-cover transition-all duration-500">
+                    </div>
+                    <div class="rounded-[1.5rem] overflow-hidden shadow-md h-20 md:h-28 xl:h-32">
+                        <img id="img-sub-3" src="" alt="ITCLUB Sub Activity 3" class="w-full h-full object-cover transition-all duration-500">
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Mandatory CSS Animation Block -->
+<style>
+@keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+</style>
+
+<!-- CSS Animation Utility Block (Ensuring smooth movement) -->
+<style>
+@keyframes marquee {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100%, 0, 0); }
+}
+</style>
+
+    <section id="about" class="py-20 bg-slate-50 border-t border-b border-slate-100">
+        <div class="max-w-[1400px] mx-auto px-6 md:px-20">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="relative">
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="space-y-4 pt-10">
+       <img src="about-photo-1.png.png" 
+     onerror="this.onerror=null; this.src='about-photo-1.jpg'; this.onerror=function(){this.src='about-photo-1.png';}" 
+     class="rounded-[1.5rem] md:rounded-[2.5rem] shadow-lg h-36 sm:h-48 md:h-64 object-cover w-full" 
+     alt="Photo 1">
+
+<img src="about-photo-2.png.png" 
+     onerror="this.onerror=null; this.src='about-photo-2.jpg'; this.onerror=function(){this.src='about-photo-2.png';}" 
+     class="rounded-[1.5rem] md:rounded-[2.5rem] shadow-lg h-28 sm:h-36 md:h-44 object-cover w-full" 
+     alt="Photo 2">
+</div>
+
+<div class="space-y-3 md:space-y-4">
+<img src="about-photo-3.png.png" 
+     onerror="this.onerror=null; this.src='about-photo-3.jpg'; this.onerror=function(){this.src='about-photo-3.png';}" 
+     class="rounded-[1.5rem] md:rounded-[2.5rem] shadow-lg h-28 sm:h-36 md:h-44 object-cover w-full" 
+     alt="Photo 3">
+
+<img src="about-photo-4.png.png" 
+     class="rounded-[1.5rem] md:rounded-[2.5rem] shadow-lg h-36 sm:h-48 md:h-64 object-cover w-full" 
+     alt="Photo 4">
+</div>
+</div>
+                    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#1e3a8a] p-6 rounded-[2rem] shadow-2xl text-center border-4 border-white">
+                        <i class="fas fa-certificate text-white text-2xl mb-2"></i>
+                        <h3 class="text-white text-xl font-black tracking-tight">80G & CSR-1</h3>
+                        <p class="text-white/80 font-medium uppercase tracking-widest text-[9px]">Verified Foundation</p>
+                    </div>
+                </div>
+                <div class="space-y-6">
+                    <div class="space-y-4">
+                        <div class="flex items-center gap-2"><div class="w-10 h-[2px] bg-[#28a745]"></div><h4 class="text-[#28a745] font-black uppercase tracking-[5px] text-[10px]">Professional NGO Profile</h4></div>
+                        <h2 class="text-[#1e3a8a] text-4xl md:text-5xl font-black uppercase leading-tight">Who We <span class="text-[#ff8a00]">Are</span></h2>
+                    </div>
+<div class="space-y-4 text-gray-600 text-base leading-relaxed">
+    <!-- Text poora wahi hai, bas font-bold ko hata kar font-semibold kiya hai taaki look premium aur clean lage -->
+    <p class="font-semibold text-[#1e3a8a] text-base md:text-lg">ITCLUB Foundation is a Section 8 non-profit organization established in 2023 and registered with the Ministry of Corporate Affairs, Government of India. We are dedicated to empowering youth, women, and underserved communities through education, technology, skill development, and sustainable development initiatives.</p>
+                        <p>Driven by innovation and community participation, we create opportunities that enhance livelihoods, promote social inclusion, and equip individuals with the knowledge and skills needed to thrive in a rapidly evolving world.</p>
+                        <p>Through partnerships with government agencies, CSR organizations, academic institutions, and community stakeholders, we implement impactful programs that foster inclusive growth, strengthen communities, and contribute to building a more empowered and future-ready India.</p>
+                    </div>
+                    <div class="pt-2"><a href="#" class="inline-block btn-outline px-10 py-3 rounded-xl uppercase text-xs tracking-widest">Read More</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-[#1e3a8a] py-24 px-6 text-white text-center">
+        <h2 class="text-3xl font-black mb-16 uppercase tracking-widest">Our Growing Impact</h2>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-8 max-w-6xl mx-auto">
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">1+ Lakh</h3><p class="text-[10px] font-bold uppercase text-blue-200">Lives Touched</p></div>
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">100+</h3><p class="text-[10px] font-bold uppercase text-blue-200">Villages Reached</p></div>
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">8+</h3><p class="text-[10px] font-bold uppercase text-blue-200">Active Projects</p></div>
+            <div class="p-8 bg-white/5 rounded-2xl border-b-4 border-[#16a34a] backdrop-blur-sm"><h3 class="text-4xl font-black mb-2">10+</h3><p class="text-[10px] font-bold uppercase text-blue-200">Indian States</p></div>
+        </div>
+    </section>
+
+   <section class="pt-12 pb-4 md:pt-20 md:pb-8 bg-gray-50 px-4 select-none">
+        <div class="max-w-[1200px] mx-auto">
+            
+            <div class="text-center mb-10 md:mb-14">
+                <h2 class="text-2xl md:text-4xl font-black text-[#1e3a8a] mb-2 uppercase tracking-wide">OUR RECENT PROJECTS</h2>
+                <div class="w-16 h-1 bg-[#f97316] mx-auto mb-2 rounded-full"></div>
+                <p class="text-[#f97316] font-bold text-xs md:text-sm tracking-widest">See how we are making a sustainable impact.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-10">
+                
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden flex flex-col justify-between p-2.5 transition-all duration-300 hover:shadow-xl">
+                    <div onclick="openProjectModal('it_training')" class="h-44 md:h-48 rounded-2xl overflow-hidden cursor-pointer relative group">
+                        <img src="Project1.png.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Free Computer Training">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-black uppercase tracking-wider">
+                            Read Details <i class="fas fa-search-plus ml-2"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-5 flex-1 flex flex-col justify-between">
+                        <div class="mb-4">
+                            <h3 class="text-base font-black text-[#1e3a8a] mb-1.5 uppercase tracking-wide leading-tight line-clamp-1">Free Computer Training Program</h3>
+                            <p class="text-gray-500 text-xs font-medium leading-relaxed line-clamp-2">Empowering local youth with industry-grade IT competencies under the structural framework of Bihar Skill Development Mission.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 pt-3 border-t border-gray-50">
+                            <button onclick="openProjectModal('it_training')" class="w-full py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-xl text-[10px] font-black uppercase tracking-wider border border-gray-200 shadow-sm transition-colors">View Details</button>
+                            <button class="w-full py-2.5 bg-[#f97316] hover:bg-[#1e3a8a] text-white rounded-xl text-[10px] font-black uppercase tracking-wider shadow-sm transition-colors">Donate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden flex flex-col justify-between p-2.5 transition-all duration-300 hover:shadow-xl">
+                    <div onclick="openProjectModal('gramin_school')" class="h-44 md:h-48 rounded-2xl overflow-hidden cursor-pointer relative group">
+                        <img src="Project2.png.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Free Gramin School">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-black uppercase tracking-wider">
+                            Read Details <i class="fas fa-search-plus ml-2"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-5 flex-1 flex flex-col justify-between">
+                        <div class="mb-4">
+                            <h3 class="text-base font-black text-[#1e3a8a] mb-1.5 uppercase tracking-wide leading-tight line-clamp-1">Free Rural Middle School</h3>
+                            <p class="text-gray-500 text-xs font-medium leading-relaxed line-clamp-2">Providing standard primary education, textbook kits, and comprehensive primary literacy up to Class 5 for rural children.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 pt-3 border-t border-gray-50">
+                            <button onclick="openProjectModal('gramin_school')" class="w-full py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-xl text-[10px] font-black uppercase tracking-wider border border-gray-200 shadow-sm transition-colors">View Details</button>
+                            <button class="w-full py-2.5 bg-[#f97316] hover:bg-[#1e3a8a] text-white rounded-xl text-[10px] font-black uppercase tracking-wider shadow-sm transition-colors">Donate</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-3xl shadow-lg border border-gray-100 overflow-hidden flex flex-col justify-between p-2.5 transition-all duration-300 hover:shadow-xl">
+                    <div onclick="openProjectModal('silai_center')" class="h-44 md:h-48 rounded-2xl overflow-hidden cursor-pointer relative group">
+                        <img src="Project3.png.png" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" alt="Free Silai Center">
+                        <div class="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center text-white text-xs font-black uppercase tracking-wider">
+                            Read Details <i class="fas fa-search-plus ml-2"></i>
+                        </div>
+                    </div>
+                    <div class="p-4 md:p-5 flex-1 flex flex-col justify-between">
+                        <div class="mb-4">
+                            <h3 class="text-base font-black text-[#1e3a8a] mb-1.5 uppercase tracking-wide leading-tight line-clamp-1">Free Skill Development Center</h3>
+                            <p class="text-gray-500 text-xs font-medium leading-relaxed line-clamp-2">Driving women empowerment by providing professional sewing, pattern cutting, and livelihood micro-entrepreneurship training.</p>
+                        </div>
+                        <div class="grid grid-cols-2 gap-2 pt-3 border-t border-gray-50">
+                            <button onclick="openProjectModal('silai_center')" class="w-full py-2.5 bg-gray-50 hover:bg-gray-100 text-gray-700 rounded-xl text-[10px] font-black uppercase tracking-wider border border-gray-200 shadow-sm transition-colors">View Details</button>
+                            <button class="w-full py-2.5 bg-[#f97316] hover:bg-[#1e3a8a] text-white rounded-xl text-[10px] font-black uppercase tracking-wider shadow-sm transition-colors">Donate</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="text-center">
+                <button class="bg-[#16a34a] hover:bg-[#117a36] text-white px-10 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest shadow-md transition-all transform active:scale-95">View All Projects</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="project-details-modal" class="fixed inset-0 bg-black/80 backdrop-blur-sm hidden items-center justify-center p-3 md:p-4 z-[99999] opacity-0 transition-opacity duration-300">
+        <div class="bg-white rounded-[2rem] max-w-2xl w-full max-h-[88vh] overflow-y-auto p-5 md:p-8 shadow-2xl relative transform scale-95 transition-transform duration-300 scrollbar-thin">
+            <button onclick="closeProjectModal()" class="absolute top-4 right-4 w-9 h-9 bg-gray-100 hover:bg-gray-200 text-gray-600 rounded-full flex items-center justify-center transition-colors z-50">
+                <i class="fas fa-times text-sm"></i>
+            </button>
+            <div id="modal-content-wrapper" class="space-y-5">
+                </div>
+        </div>
+    </div>
+
+    <script>
+        // CLEAN SEGREGATED DATABASE - LOCAL IMAGES CORRECTED
+        const projectData = {
+            it_training: {
+                title: "Free Computer Training Program",
+                subtitle: "An Initiative Supported by Bihar Skill Development Mission (BSDM)",
+                img: "Project1.png",
+                desc: "Managed under the structural supervision of ITCLUB Foundation, this professional IT program operates in strategic alignment with the Bihar Skill Development Mission (BSDM) and the Department of Information Technology, Government of Bihar. The program focuses on empowering marginalized youth with technical literacy, system administrative operations, and digital workflow practices required for modern tech careers.",
+                specials: [
+                    { label: "Course Duration", val: "4 Months Comprehensive Training" },
+                    { label: "Daily Schedule", val: "4 Hours Rigorous Practical Classes" },
+                    { label: "Target Demographics", val: "Unemployed Youth & Tech Students" },
+                    { label: "Financial Structure", val: "100% Free / Corporate CSR Eligible" }
+                ],
+                impact: "Bridging the digital divide by building scalable technical skill sets among regional youth clusters."
+            },
+            gramin_school: {
+                title: "Free Rural Middle School",
+                subtitle: "Primary Educational Infrastructure Program",
+                img: "Project2.png",
+                desc: "To eliminate the educational gap in remote pockets, ITCLUB Foundation operates a systematic primary school structure providing cost-free education setups up to the Class 5th standard. The framework covers end-to-end curriculum support, basic mathematical skills, core ethics, and modern analytics for children belonging to economically backward sectors.",
+                specials: [
+                    { label: "Academic Limit", val: "Up to Class 5th Standard Level" },
+                    { label: "Target Segment", val: "Underprivileged Rural Children" },
+                    { label: "Sponsorship Model", val: "100% Free Uniforms, Books & Tuition" },
+                    { label: "Core Objective", val: "Grassroots Foundation & Analytical Skills" }
+                ],
+                impact: "Eradicating childhood illiteracy inside remote rural blocks through structural academic integration."
+            },
+            silai_center: {
+                title: "Free Skill Development Center",
+                subtitle: "Women Empowerment & Micro-Livelihood Generation",
+                img: "Project3.png",
+                desc: "Our structural Skill Development Center provides comprehensive textile training, industrial sewing techniques, apparel cutting, and retail designing parameters to vulnerable and aspiring women. The ultimate mission is to build self-reliant local production hubs where women can turn their skill sets into persistent financial livelihood channels.",
+                specials: [
+                    { label: "Empowerment Focus", val: "Socio-Economic Self-Reliance" },
+                    { label: "Training Modules", val: "Professional Tailoring, Design & Cutting" },
+                    { label: "Primary Milestone", val: "Micro-Entrepreneurship Setup Support" },
+                    { label: "Program Allocation", val: "Zero Cost Entry for Verified Batches" }
+                ],
+                impact: "Securing financial independence for rural women to elevate overall domestic family income streams."
+            }
+        };
+
+        // Open Responsive Dashboard Modal Popup Controller
+        if(typeof openProjectModal !== 'function') {
+            window.openProjectModal = function(projectId) {
+                const modal = document.getElementById('project-details-modal');
+                const wrapper = document.getElementById('modal-content-wrapper');
+                const data = projectData[projectId];
+
+                if (!modal || !data) return;
+
+                const specsHTML = data.specials.map(spec => `
+                    <div class="bg-gray-50 border border-gray-100 p-3 rounded-xl flex flex-col justify-center">
+                        <span class="text-[10px] text-gray-400 font-black uppercase tracking-wider mb-0.5">${spec.label}</span>
+                        <span class="text-xs text-[#1e3a8a] font-bold leading-tight">${spec.val}</span>
+                    </div>
+                `).join('');
+
+                wrapper.innerHTML = `
+                    <div class="rounded-2xl overflow-hidden h-44 md:h-64 w-full shadow-inner relative mt-4">
+                        <img src="${data.img}" class="w-full h-full object-cover">
+                    </div>
+                    <div class="space-y-1">
+                        <span class="text-[#f97316] text-[10px] md:text-xs font-black uppercase tracking-widest block">${data.subtitle}</span>
+                        <h2 class="text-[#1e3a8a] text-lg md:text-2xl font-black uppercase leading-tight">${data.title}</h2>
+                        <div class="w-16 h-[3px] bg-[#22c55e] rounded-full mt-2"></div>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2 w-full">
+                        ${specsHTML}
+                    </div>
+                    <div class="space-y-3 text-gray-600 text-xs md:text-sm leading-relaxed font-normal">
+                        <p class="text-justify">${data.desc}</p>
+                        <div class="bg-blue-50/80 p-3.5 rounded-xl border-l-4 border-[#1e3a8a]">
+                            <span class="block text-[9px] font-black text-[#1e3a8a] uppercase tracking-wider mb-1">PROJECT MISSION OBJECTIVE</span>
+                            <p class="text-gray-700 font-bold text-xs leading-normal">${data.impact}</p>
+                        </div>
+                    </div>
+                    <div class="pt-3 border-t border-gray-100 flex items-center justify-end">
+                        <a href="#" class="w-full sm:w-auto text-center bg-[#f97316] hover:bg-[#1e3a8a] text-white font-black text-[11px] uppercase tracking-widest py-3 px-8 rounded-xl shadow-md transition-all">
+                            Support this Initiative
+                        </a>
+                    </div>
+                `;
+
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+                setTimeout(() => {
+                    modal.classList.remove('opacity-0');
+                    modal.querySelector('div').classList.remove('scale-95');
+                    modal.querySelector('div').classList.add('scale-100');
+                }, 50);
+            };
+        }
+
+        // Close Controller
+        if(typeof closeProjectModal !== 'function') {
+            window.closeProjectModal = function() {
+                const modal = document.getElementById('project-details-modal');
+                if (!modal) return;
+
+                modal.classList.add('opacity-0');
+                modal.querySelector('div').classList.remove('scale-100');
+                modal.querySelector('div').classList.add('scale-95');
+                
+                setTimeout(() => {
+                    modal.classList.remove('flex');
+                    modal.classList.add('hidden');
+                }, 300);
+            };
+        }
+    </script>
+       <!-- =========================================================
+     COMPACT, SMOOTH & FAST ACCREDITATIONS SLIDER
+     ========================================================= -->
+<style>
+    /* Ultra-fast smooth hardware accelerated moving track */
+    @keyframes fastMarquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-264px * 13)); } /* 240px width + 24px total margins */
+    }
+    .animate-fast-marquee {
+        display: flex;
+        width: max-content;
+        animation: fastMarquee 35s linear infinite;
+    }
+    .animate-fast-marquee:hover {
+        animation-play-state: paused; /* User jab touch ya mouse le jaye toh smooth rukh jaye */
+    }
+</style>
+
+<style>
+    /* Yeh CSS hona zaroori hai, iske bina slider freeze ya gayab ho jata hai */
+    @keyframes fastMarquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(calc(-264px * 13)); } /* 240px width + 24px gap */
+    }
+    .animate-fast-marquee {
+        display: flex;
+        width: max-content;
+        animation: fastMarquee 35s linear infinite;
+    }
+    .animate-fast-marquee:hover {
+        animation-play-state: paused; /* Mouse lane par dheere se rukega */
+    }
+</style>
+
+<section class="py-16 bg-gray-50 overflow-hidden text-center border-t border-b border-gray-100">
+    <div class="max-w-[1400px] mx-auto px-6 mb-10 text-center">
+        <h2 class="text-3xl font-black text-[#003399] mb-2 uppercase tracking-wide">Affiliations & Accreditations</h2>
+        <p class="text-[#ff8a00] font-bold text-sm tracking-wide">Authorized Registrations & Legal Compliances</p>
+        <div class="w-20 h-[3px] bg-[#ff8a00] mx-auto mt-3"></div>
+    </div>
+    
+    <div class="w-full overflow-hidden relative select-none bg-transparent py-2">
+        <div class="animate-fast-marquee gap-6">
+            
+           <div class="flex gap-6 overflow-hidden select-none">
+            
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="mca.png.png" alt="MCA" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="gst.png.png" alt="GSTIN" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="bihar.png.png" alt="Bihar CSR" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="anudan.png.png" alt="E-Anudaan" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="epfo.png.png" alt="EPFO" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="esi.png.png" alt="ESIC" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="darpan.png.png" alt="NGO Darpan" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="gem.png.png" alt="GeM" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="india.png.png" alt="National CSR" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="iso.png.png" alt="ISO" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="itr.png.png" alt="Income Tax" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="msme.png.png" alt="MSME" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="niti.png.png" alt="NITI Aayog" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="nsdc.png.png" alt="NSDC" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="skillindia.png.png" alt="Skill India" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0 transition-transform hover:scale-105 duration-300">
+                <img src="ddugky.png.png" alt="DDU-GKY" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="mca.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="gst.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="bihar.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="anudan.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="epfo.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="esi.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="darpan.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="gem.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="india.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="iso.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="itr.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="msme.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="niti.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="nsdc.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="skillindia.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+            <div class="flex flex-col items-center justify-center bg-white p-4 rounded-xl border border-blue-100 w-[240px] shadow-sm h-32 border-t-4 border-t-[#003399] shrink-0" aria-hidden="true">
+                <img src="ddugky.png.png" class="h-14 w-auto object-contain max-w-[90%]">
+            </div>
+
+        </div>
+    </div>
+</section>
+   <!-- =========================================================
+     PERFECT UNIFIED HEADER-BLUE FOOTER WITH FLIPPED PHONE ICON
+     ========================================================= -->
+<footer class="bg-[#003399] text-white pt-16 pb-6 px-4 md:px-20 relative z-10">
+    <!-- Grid adjusted: 4 Columns with wider space for Address & Contact -->
+    <div class="max-w-[1400px] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 xl:gap-12 pb-12">
+        
+        <!-- Column 1: Brand & About Info (Current Logo Integrated) (Takes 3/12 Space) -->
+        <div class="lg:col-span-3 space-y-4">
+            <div class="flex items-center gap-3">
+                <img src="logo.png" alt="ITCLUB Foundation" class="h-12 w-auto object-contain">
+                <div>
+                    <h3 class="font-black text-lg tracking-wider leading-tight text-white">ITCLUB</h3>
+                    <p class="text-[10px] uppercase tracking-[2px] text-[#22c55e] font-bold">FOUNDATION</p>
+                </div>
+            </div>
+            <p class="text-white/80 text-sm leading-relaxed font-medium">
+                ITCLUB Foundation is committed to driving positive change and building a more equitable, digitally empowered society through innovation.
+            </p>
+        </div>
+
+        <!-- Column 2: Quick Links (Shifted Left - Takes 2/12 Space) -->
+        <div class="lg:col-span-2 space-y-4">
+            <h4 class="text-sm font-black uppercase tracking-[3px] text-[#ff8a00] italic relative inline-block">
+                Quick Links
+                <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-[#ff8a00] -mb-1"></span>
+            </h4>
+            <ul class="space-y-2.5 text-sm font-medium text-white/80">
+                <li><a href="#home" class="hover:text-[#ff8a00] hover:pl-2 transition-all duration-300 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#ff8a00]"></i> Home</a></li>
+                <li><a href="#about" class="hover:text-[#ff8a00] hover:pl-2 transition-all duration-300 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#ff8a00]"></i> Who We Are</a></li>
+                <li><a href="#mission" class="hover:text-[#ff8a00] hover:pl-2 transition-all duration-300 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#ff8a00]"></i> Our Mission</a></li>
+                <li><a href="#gallery" class="hover:text-[#ff8a00] hover:pl-2 transition-all duration-300 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#ff8a00]"></i> Media & Gallery</a></li>
+                <li><a href="#contact" class="hover:text-[#ff8a00] hover:pl-2 transition-all duration-300 flex items-center gap-2"><i class="fas fa-chevron-right text-[10px] text-[#ff8a00]"></i> Contact Us</a></li>
+            </ul>
+        </div>
+
+        <!-- Column 3: Head Office & Contact (Given Maximum Space for Single-Line Look - Takes 4/12 Space) -->
+        <div class="lg:col-span-4 space-y-4">
+            <h4 class="text-sm font-black uppercase tracking-[3px] text-[#ff8a00] italic relative inline-block">
+                Head Office
+                <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-[#ff8a00] -mb-1"></span>
+            </h4>
+            <ul class="space-y-3.5 text-sm font-medium text-white/80">
+                <!-- Address perfectly spread out -->
+                <li class="flex items-start gap-3 w-full">
+                    <i class="fas fa-map-marker-alt text-[#ff8a00] mt-1 text-base shrink-0"></i>
+                    <span class="leading-relaxed whitespace-nowrap">
+                        ITCLUB House, Madhopara Khazanchi Hat,<br>
+                        Bhatta Bazar, Purnea-854301, Bihar, India
+                    </span>
+                </li>
+                <!-- Flipped Phone Icon perfectly facing towards numbers -->
+                <li class="flex items-center gap-3 w-full">
+                    <i class="fas fa-phone-flip text-[#ff8a00] text-base shrink-0 fa-flip-horizontal"></i>
+                    <div class="flex flex-wrap items-center gap-x-4 gap-y-1">
+                        <a href="tel:+918409744414" class="hover:text-white transition-colors whitespace-nowrap">+91 84097 44414</a>
+                        <span class="text-white/30 hidden sm:inline">|</span>
+                        <a href="tel:+918292999947" class="hover:text-white transition-colors whitespace-nowrap">+91 82929 99947</a>
+                    </div>
+                </li>
+                <!-- Email Row -->
+                <li class="flex items-center gap-3 w-full">
+                    <i class="fas fa-envelope text-[#ff8a00] text-base shrink-0"></i>
+                    <a href="mailto:info@itclubfoundation.org" class="hover:text-white transition-colors whitespace-nowrap">info@itclubfoundation.org</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Column 4: Newsletter Box & Aligned Big Social Icons (Takes 3/12 Space) -->
+        <div class="lg:col-span-3 space-y-5">
+            <div class="space-y-3">
+                <h4 class="text-sm font-black uppercase tracking-[3px] text-[#ff8a00] italic relative inline-block">
+                    Newsletter
+                    <span class="absolute bottom-0 left-0 w-8 h-[2px] bg-[#ff8a00] -mb-1"></span>
+                </h4>
+                <p class="text-white/80 text-xs md:text-sm font-medium">Subscribe to stay updated with our latest initiatives.</p>
+                
+                <!-- Email Input Box Container -->
+                <div class="flex w-full rounded-xl overflow-hidden border border-white/10 focus-within:border-[#ff8a00] transition-all bg-black/20">
+                    <input type="email" placeholder="Your Email Address" class="w-full bg-transparent px-4 py-3 text-sm text-white placeholder-white/40 focus:outline-none">
+                    <button class="bg-[#ff8a00] text-white px-5 hover:bg-black/40 transition-all duration-300 flex items-center justify-center">
+                        <i class="fas fa-paper-plane text-sm"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- ATTRACTIVE LARGE SOCIAL MEDIA ICONS -->
+            <div class="space-y-2 pt-1">
+                <p class="text-[10px] uppercase font-black tracking-[2px] text-white/50">Connect With Us</p>
+                <div class="flex items-center justify-between gap-2 bg-black/20 p-3 rounded-xl border border-white/10">
+                    <a href="https://wa.me/918292999947" target="_blank" class="text-[#25D366] text-2xl hover:scale-125 transition-all"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://www.facebook.com/itclubfoundatio" target="_blank" class="text-[#1877f2] text-2xl hover:scale-125 transition-all"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/itclubfoundation/" target="_blank" class="text-[#e4405f] text-2xl hover:scale-125 transition-all"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/itclubfoundation/" target="_blank" class="text-[#0077b5] text-2xl hover:scale-125 transition-all"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://x.com/itclubfoundatio" target="_blank" class="text-[#1da1f2] text-2xl hover:scale-125 transition-all"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.youtube.com/@itclubfoundation" target="_blank" class="text-[#ff0000] text-2xl hover:scale-125 transition-all"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- =========================================================
+         BOTTOM CREDITS & LEGAL LINKS SECTION (WITH DIVIDER LINE)
+         ========================================================= -->
+    <div class="w-full text-xs md:text-sm tracking-wide font-medium border-t border-white/20 pt-6">
+        <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+            
+            <!-- Left Side: Copyright & Design Credit -->
+            <div class="text-center md:text-left space-y-1">
+                <p class="text-white/90">&copy; 2026 ITCLUB FOUNDATION. ALL RIGHTS RESERVED.</p>
+                <p class="block text-white/60 text-[11px] md:text-xs">
+                    DESIGNED BY <span class="text-[#ff8a00] font-black tracking-widest uppercase">ITCLUB</span>
+                </p>
+            </div>
+            
+            <!-- Right Side: Policy Links -->
+            <div class="flex flex-wrap justify-center items-center gap-x-4 gap-y-2 text-white/80">
+                <a href="privacy-policy.html" target="_blank" class="hover:text-[#ff8a00] transition-colors duration-300">Privacy Policy</a>
+                <span class="text-white/40 hidden sm:inline">|</span>
+                
+                <a href="refund-policy.html" target="_blank" class="hover:text-[#ff8a00] transition-colors duration-300">Refund policy</a>
+                <span class="text-white/40 hidden sm:inline">|</span>
+                
+                <a href="terms-conditions.html" target="_blank" class="hover:text-[#ff8a00] transition-colors duration-300">Terms and Conditions</a>
+                <span class="text-white/40 hidden sm:inline">|</span>
+                
+                <a href="disclaimer.html" target="_blank" class="hover:text-[#ff8a00] transition-colors duration-300">Disclaimer</a>
+            </div>
+
+        </div>
+    </div>
+</footer>
+
+    <script>
+        const contentData = [
+            { wm: "DEVELOPMENT", l1: "SKILL", l2: "DEVELOPMENT", desc: "Building future-ready skills that enhance employability and sustainable livelihoods.", imgs: ["skill1.png.png", "skill2.png.png", "skill3.png.png", "skill4.png.png"] },
+            { wm: "LITERACY", l1: "EDUCATION &", l2: "LITERACY", desc: "Empowering individuals through education, digital literacy, and technology-driven learning opportunities.", imgs: ["education1.png.png", "education2.png.png", "education3.png.png", "education4.png.png"] },
+            { wm: "EMPOWERMENT", l1: "WOMEN", l2: "EMPOWERMENT", desc: "Empowering women through skills, entrepreneurship, and economic opportunities.", imgs: ["women1.png.png", "woman2.png.png", "woman3.png.png", "woman4.png.png"] },
+            { wm: "NUTRITION", l1: "HEALTH &", l2: "NUTRITION", desc: "Improving health and well-being through healthcare access, awareness, and nutrition support.", imgs: ["health1.png.png", "health2.png.png", "health3.png.png", "health4.png.png"] },
+            { wm: "CARE", l1: "ENVIRONMENTAL", l2: "CARE", desc: "Promoting environmental stewardship through conservation, climate action, and sustainable practices.", imgs: ["enviroment1.png.png", "enviroment2.png.png", "enviroment3.png.png", "enviroment4.png.png"] },
+            { wm: "SUPPORT", l1: "LIVELIHOOD", l2: "PROMOTION", desc: "Creating sustainable livelihood opportunities through entrepreneurship, skills, and economic empowerment.", imgs: ["livelihood1.png.png", "livelihood2.png.png", "livelihood3.png.png", "livelihood4.png.png"] }
+        ];
+
+        let index = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function updateDots() {
+            const dotsContainer = document.getElementById('dots');
+            if (dotsContainer) {
+                dotsContainer.innerHTML = contentData.map((_, i) => 
+                    `<span class="dash-nav ${i === index ? 'active' : ''}"></span>`
+                ).join('');
+            }
+        }
+
+        function typeSliderEffect() {
+            const current = contentData[index];
+            const line1El = document.getElementById('line1');
+            const line2El = document.getElementById('line2');
+            const watermarkEl = document.getElementById('watermark');
+            const descEl = document.getElementById('description');
+
+            if (line1El && line1El.innerText !== current.l1) {
+                line1El.innerText = current.l1;
+                if (watermarkEl) watermarkEl.innerText = current.wm; 
+                if (descEl) descEl.innerText = current.desc;
+                
+                const imgMain = document.getElementById('img-main');
+                const imgSub1 = document.getElementById('img-sub-1');
+                const imgSub2 = document.getElementById('img-sub-2');
+                const imgSub3 = document.getElementById('img-sub-3');
+
+                if (imgMain) imgMain.src = current.imgs[0];
+                if (imgSub1) imgSub1.src = current.imgs[1];
+                if (imgSub2) imgSub2.src = current.imgs[2];
+                if (imgSub3) imgSub3.src = current.imgs[3];
+                updateDots();
+            }
+
+            const fullText = current.l2;
+
+            if (line2El) {
+                if (isDeleting) {
+                    line2El.innerHTML = fullText.substring(0, charIndex - 1);
+                    charIndex--;
+                } else {
+                    line2El.innerHTML = fullText.substring(0, charIndex + 1);
+                    charIndex++;
+                }
+            }
+
+            let typeSpeed = isDeleting ? 60 : 120;
+
+            if (!isDeleting && charIndex === fullText.length) {
+                typeSpeed = 2500; 
+                isDeleting = true;
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                index = (index + 1) % contentData.length; 
+                typeSpeed = 800; 
+            }
+
+            setTimeout(typeSliderEffect, typeSpeed);
+        }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            typeSliderEffect();
+        });
+    </script>
+</body>
+<!-- OFFICIAL MAINTENANCE / UPDATE NOTIFICATION MODAL -->
+<div id="update-notification-modal" class="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center p-4 z-[9999] transition-opacity duration-500">
+    <div class="bg-white rounded-3xl max-w-sm w-full p-6 shadow-2xl border-t-8 border-[#1e3a8a] text-center transform scale-100 transition-transform duration-500 relative">
+        
+        <!-- Animated Icon Badge -->
+        <div class="w-14 h-14 bg-blue-50 text-[#1e3a8a] rounded-full flex items-center justify-center mx-auto mb-3 text-xl shadow-inner animate-pulse">
+            <i class="fas fa-tools text-[#f97316]"></i>
+        </div>
+
+        <!-- Heading -->
+        <h3 class="text-[#1e3a8a] text-lg md:text-xl font-black uppercase tracking-wide mb-1">
+            Website Under Update
+        </h3>
+        
+        <div class="w-10 h-1 bg-[#22c55e] mx-auto mb-3 rounded-full"></div>
+
+        <!-- Short English Message -->
+        <p class="text-gray-600 text-xs md:text-sm font-medium leading-relaxed mb-5">
+            We are currently adding new features and finalizing some sections to improve your experience. You are welcome to browse the live pages in the meantime.
+        </p>
+
+        <!-- Button to close notification -->
+        <button onclick="closeUpdateNotification()" class="w-full bg-[#1e3a8a] hover:bg-[#f97316] text-white font-bold text-xs uppercase tracking-widest py-3 px-6 rounded-xl shadow-lg transition-all duration-300 transform active:scale-95">
+            Proceed to Website
+        </button>
+    </div>
+</div>
+
+<script>
+    function closeUpdateNotification() {
+        const modal = document.getElementById('update-notification-modal');
+        if (modal) {
+            modal.style.opacity = '0';
+            setTimeout(() => {
+                modal.style.display = 'none';
+            }, 500);
+        }
+    }
+</script>
+</html>
